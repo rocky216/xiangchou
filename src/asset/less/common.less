@@ -1,0 +1,55 @@
+/* 红色 */
+@redColor:    #eb4245;
+
+/* 黑色 */
+@grayColor:   #eee;
+@grayf1:      #f1f1f1;
+@gray333:     #333;
+@gray666:     #666;
+@gray999:     #999;
+@grayddd:     #ddd;
+
+
+/* 白色 */
+@whiteColor:  #fff;
+
+/* 绿色 */
+@greenColor:  #41d04d;
+
+@size12:      0.35rem;
+@size14:        0.42rem;
+@size16:        0.5rem;
+
+html, body, ul, li , input{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #333;
+  box-sizing: border-box;
+}
+body, html{
+  font-size: @size12;
+  background-color: @grayf1;
+}
+
+a {
+  color: @gray333;
+  text-decoration: none;
+}
+a:active, a:link, a:visited {
+  text-decoration: none;
+}
+
+.siglehidden(@width){
+  width: @width;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.manyhidden(@num){
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @num;
+  -webkit-box-orient: vertical;
+}
