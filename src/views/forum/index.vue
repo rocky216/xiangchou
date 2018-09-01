@@ -131,7 +131,9 @@ export default {
   },
   methods:{
     mobileHandle(num){
+      num = num.toString()
       let arr = []
+      console.log(num);
       for(let i=0;i<num.length; i++){
 
         if (i>3 && i<8) {
@@ -139,6 +141,7 @@ export default {
         }else {
           arr.push(num[i])
         }
+
       }
       return arr.join('')
     },

@@ -1,7 +1,7 @@
 <template lang="html">
 <div class="home">
   <Detail v-if="detailId?true:false" :detailId="detailId" @removeDetail="removeDetail" ></Detail>
-  <Nav></Nav>
+  <!-- <Nav></Nav> -->
   <div class="swip">
     <Swipe :show-indicators="false">
       <SwipeItem v-for="(item,index) in banners" :key="index">
@@ -11,8 +11,11 @@
       </SwipeItem>
     </Swipe>
   </div>
+  <div class="">
+    <IconNav/>
+  </div>
   <div class="newsList">
-    <ul > 
+    <ul >
       <li v-for="item in top" :key="item.id" @click="lookDetail(item)">
         <div class="img">
           <img :src="baseUrl+item.cover" alt="">
@@ -73,6 +76,7 @@ import {fetch} from "utils"
 import { Swipe, SwipeItem, Button} from "mint-ui"
 import Nav from "components/Nav"
 import Detail from "views/category/detail"
+import IconNav from "components/IconNav"
 
 
 export default {
@@ -81,7 +85,8 @@ export default {
     SwipeItem,
     Button,
     Nav,
-    Detail
+    Detail,
+    IconNav
   },
   data(){
     return {
