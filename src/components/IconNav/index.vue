@@ -1,7 +1,7 @@
 <template lang="html">
 <div class="IconNav">
   <ul>
-    <li @click="jump(item)" v-for="item in IconNavData">
+    <li @click="jump(item)" v-for="item in IconNavData" v-if="item.r_value!=1">
       <div class="img">
         <img :src="getImg(item.r_value)" alt="">
       </div>
